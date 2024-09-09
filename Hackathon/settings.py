@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'Hackathon.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgres://username:password@hostname:port/dbname',
+        default='postgres://username:password@hostname:port/mysite',
         conn_max_age=600
     )
 }
