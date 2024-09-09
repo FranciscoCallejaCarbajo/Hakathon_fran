@@ -83,11 +83,16 @@ WSGI_APPLICATION = 'Hackathon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         default='postgres://username:password@hostname:port/mysite',
+#         conn_max_age=600
+#     )
+# }
 DATABASES = {
     'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgres://username:password@hostname:port/mysite',
-        conn_max_age=600
+        default=os.environ.get('DATABASE_URL')
     )
 }
 
